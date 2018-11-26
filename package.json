@@ -1,6 +1,16 @@
 {
   "name": "react-boiler-plate",
   "version": "0.1.0",
+  "description": "React Boiler Plate App that is integrated with Docker,Travis CI and demonstrates the features of CI",
+  "author": "Rakesh",
+  "keywords": [
+    "React",
+    "Docker React",
+    "Docker Compose React example",
+    "Travis CI React ",
+    "Travis CI",
+    "React Travis CI"
+  ],
   "private": true,
   "dependencies": {
     "react": "^16.6.3",
