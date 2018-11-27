@@ -1,8 +1,8 @@
-sudo: required 
+sudo: required
 services:
   - docker
 
-before_install
+before_install:
   - docker build -t rakeshcheekatimala/react-boiler-plate -f Dockerfile.dev .
 
 script:
