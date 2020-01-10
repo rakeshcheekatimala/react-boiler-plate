@@ -14,7 +14,7 @@ Simple Project that is created by create-react-app(CLI) that demonstrates the fe
 - [x] Adding husky which runs the linter and formats the source code before commit 
 - [x] Added scripts to run the code coverage
 - [x] Added Visual Testing test-cases and scripts to run the visual testing
-- [x] Docker & Docker-Compose.up 
+- [x] Setup for docker file & docker-compose.yml with volumes 
 
 ## Available Scripts: 
 
