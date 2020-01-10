@@ -4,7 +4,7 @@ Simple Project that is created by create-react-app(CLI) that demonstrates the fe
 ### Features:
 
 - [x] Initial Skelton and Setup of React Application.
-- [x] Implementation of SASS 
+- [x] Implementation of SCSS & Node sass plugin to run SCSS
 - [x] Initial Skelton for Components, folder structure of the application.
 - [x] Jest Setup and Unit test Cases for the components used in the app.
 - [x] Cypress Setup and e2e test cases for automation.
