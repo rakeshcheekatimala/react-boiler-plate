@@ -1,35 +1,72 @@
 {
-  "name": "react-boiler-plate",
-  "version": "0.1.0",
-  "description": "React Boiler Plate App that is integrated with Docker,Travis CI and demonstrates the features of CI",
-  "author": "Rakesh",
-  "keywords": [
-    "React",
-    "Docker React",
-    "Docker Compose React example",
-    "Travis CI React ",
-    "Travis CI",
-    "React Travis CI"
-  ],
-  "private": true,
-  "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+	"name": "react-boiler-plate",
+	"version": "0.1.0",
+	"description": "React Boiler Plate App that is integrated with Docker,Travis CI and demonstrates the features of CI",
+	"author": "Rakesh",
+	"keywords": [
+		"React",
+		"Docker React",
+		"Docker Compose React example",
+		"Travis CI React ",
+		"Travis CI",
+		"React Travis CI"
+	],
+	"private": true,
+	"dependencies": {
+		"react": "^16.6.3",
+		"react-dom": "^16.6.3",
+		"react-scripts": "2.1.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"e2e": "cypress open",
+		"storybook": "start-storybook -p 9009 -s public",
+		"build-storybook": "build-storybook -s public",
+		"coverage": "yarn test --coverage --watchAll=false --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/**/*.stories.js",
+		"visual:testing": "percy exec -- cypress run"
+	},
+	"jest": {
+		"coveragePathIgnorePatterns": [
+			"src/index.js",
+			"src/serviceWorker.js"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"eslintConfig": {
+		"extends": "react-app",
+		"globals": {
+			"cy": true,
+			"context": true
+		}
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"devDependencies": {
+		"@percy/cypress": "^2.2.0",
+		"@storybook/addon-actions": "^5.2.8",
+		"@storybook/addon-links": "^5.2.8",
+		"@storybook/addons": "^5.2.8",
+		"@storybook/react": "^5.2.8",
+		"cypress": "^3.8.1",
+		"husky": "^4.0.6",
+		"lint-staged": "^9.5.0",
+		"prettier": "^1.19.1"
+	}
 }
